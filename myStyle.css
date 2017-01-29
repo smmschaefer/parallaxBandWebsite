@@ -1,0 +1,300 @@
+/*------------------------  ANIMATION  ------------------------*/
+
+/*------------------------  FRAME WORK  ------------------------*/
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin:0;
+    padding:0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: serif;
+}
+
+#top {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    z-index: 4;
+    background: rgba(25, 25, 25, .9);
+    /*padding: 2px;*/
+    border: 2px solid black;
+}
+
+.slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 320px;
+    height: 240px;
+    transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(240,230,220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+    transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+
+.title {
+    width: 50%;
+    padding: 5%;
+    border-radius: 5px;
+    float: left;
+    background: red;
+    /*opacity: 0.7;*/
+    /*background: rgba(240,230,220, .7);*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.bandTitle {
+    width: 40%;
+    padding: 5%;
+    float: right;
+    border-radius: 2px;
+    background: rgba(25, 25, 25, .8);
+    /*background: red;
+
+    background: url('black50.png');*/
+    /*background: rgba(240,230,220, .7);*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.showTitle {
+    width: 40%;
+    padding: 5%;
+    float: left;
+    border-radius: 2px;
+    background: rgba(25, 25, 25, .8);
+    /*background: rgba(240,230,220, .7);*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.showTitle:hover {
+    background: rgba(25, 25, 25, 10);
+}
+
+.showContent {
+    width: 30%;
+    padding: 5%;
+    float: right;
+    border-radius: 2px;
+    background: rgba(25, 25, 25, .8);
+    /*background: rgba(240,230,220, .7);*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+
+.photoTitle {
+    width: 40%;
+    padding: 5%;
+    float: right;
+    border-radius: 2px;
+    float: left;
+    background: rgba(25, 25, 25, .2);
+    /*background: rgba(240,230,220, .7);*/
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.circleNow {
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    
+}
+
+.circleNow:hover {
+    background-color: black;
+}
+
+.slide:nth-child(2n) .title {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.slide, .slide:before {
+    background: 50% 50% / cover;
+}
+
+.header {
+    text-align: center;
+    font-size: 175%;
+    color: #fff;
+    text-shadow: 0 2px 2px #000;
+}
+
+
+#title {
+   /* background-color: green;*/
+    background-image: url("lightning1.gif");
+    background-attachment: fixed;
+}
+
+#slide1:before {
+    /*background-color: purple;*/
+    background-image: url("http://www.pastortimclark.com/wp-content/uploads/2012/10/Casas-de-show-em-sp-Shows-de-Rock-Forro-Sertanejo-e-Pagode.jpg");
+    /*background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg");*/
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+}
+
+#slide2 {
+    /*background-color: green;*/
+    background-image: url("http://p4cdn4static.sharpschool.com/UserFiles/Servers/Server_91869/Image/Band4.jpg");
+    /*background-image: url("/Users/sam/Desktop/html/drones/Oceanlightning.gif");*/
+    background-attachment: fixed;
+}
+
+#slide3:before {
+   /* background-color: purple;*/
+    /*background-image: url("http://www.wired.com/wp-content/uploads/2014/10/ut_interstellarOpener_f.png");*/
+    background-image: url("samDrone.gif");
+    transform: translateZ(-1px) scale(2);
+    z-index:-1;
+}
+
+#slide4 {
+    background: #504A4B;
+}
+
+
+/*------------------------  STYLES  ------------------------*/
+
+p {
+    font-size: 140%;
+    line-height: 150%;
+    color: black;
+}
+
+.boxText {
+    color: white;
+    font-size: 1.4em;
+}
+
+h1 {
+    font-size: 250%;
+    /* text-shadow: .3em .3em .3em black;*/
+}
+
+#title h1 {
+    text-shadow: .3em .3em .3em black;
+    
+}
+
+.slide h1 {
+    color: white;
+    font-family: serif;
+    text-shadow: .2em .2em .2em black;
+    
+}
+
+#top p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    
+}
+
+#top a {
+    color: white;
+    font-size: 1.2em;
+    
+}
+
+#top a:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+a {
+	color: white;
+    text-decoration: none;
+}
+
+a:hover {
+	color: red;
+    text-decoration: none;
+}
+
+ul li {
+	color: white;
+}
+
+ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+ul li a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+/* testing....
+.img {
+
+    width: 20em;
+    height: 4.5em;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: url("fist.jpg") no-repeat;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: type(value);
+    -ms-filter: type(value);
+    -o-filter: type(value);
+}
+
+
+.img:hover {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: type(value);
+    -ms-filter: type(value);
+    -o-filter: type(value);
+}
+
+*/
+
+
+
